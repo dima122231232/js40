@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptiv.css">
+    <script src="libs/gsap/gsap.min.js" ></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" ></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" ></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-flex">
+            <div class="logo"><a href="#"><img src="img/logo.png" alt="logo" class="logo"></a></div>
+    
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li class="nav_li"><a href="#" class="nav_a">Home</a></li>
+                    <li class="nav_li"><a href="page/AboutUs.html" class="nav_a">About us</a></li>
+                    <li class="nav_li"><a href="page/Buyers.html" class="nav_a">Buyers</a></li>
+                    <li class="nav_li"><a href="page/Sellers.html" class="nav_a">Sellers</a></li>
+                    <li class="nav_li"><a href="page/Developers.html" class="nav_a">Developers</a></li>
+                </ul>
+            </nav>
+    
+            <div class="header__div-button">
+                <button class="header_button">
+                    <div class="header_button-text">Contact us</div>
+                    <img src="img/buttonArrow.png" alt="button_img" class="buttonArrow">
+                </button>
+            </div>
+    
+            <!-- Burger menu icon -->
+            <div class="burger-menu" id="burger-menu">
+                <div class="burger-bar"></div>
+                <div class="burger-bar"></div>
+                <div class="burger-bar"></div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main">
+        <section class="container section__start">
+            <img src="img/mainBeck.png" alt="" class="section__start-img">
+            <div class="start_center">
+                <h3 class="start_h3">0<span class="font-size-df">%</span> Commission</h3>
+                <h4 class="start_h4">A New Era Begins.</h4>
+                <p class="start_p">Say goodbye to commissions and hello to a smarter, fairer way to buy and sell property.</p>
+            </div>
+        </section>
+
+        <section class="container section__welcome">
+            <h1 class="welcome-h1">Welcome to <span>the future</span></h1>
+            <h6 class="welcome-h6">A Bold New Vision for Real Estate</h6>
+            
+            <div class="row animation1">
+                <div class="col-6 wel_left centAdap adaptivLast">
+                    <img src="img/welcome-img1.png" alt="" class="welcome-img1">
+                    <button class="welcome-invest">
+                        <img src="img/buttonArrow.png" alt="buttonArrow" class="welcome__buttonArrow">
+                        <div >Invest</div>
+                    </button>
+                </div>
+                <div class="col-6 cenCenter">
+                    <h6 class="welcome_text">Imagine a world where every dirham you invest in property stays exactly where it belongs—with you.</h6>
+                    <p class="welcome_text-p">A world where buying or selling a home isn’t clouded by hidden fees or inflated commissions. Velday is making that world a reality.</p>
+                </div>
+            </div>
+            <div class="row animation2">
+                <div class="col-6 endEnd">
+                    <h6 class="welcome_text">We’re not just changing how real estate works; we’re rewriting its story. The days of losing your hard-earned money to middlemen are over.</h6>
+                    <p class="welcome_text-p">Velday puts power, profit, and transparency back into the hands of the people who matter most—buyers, sellers, and developers.</p>
+                </div>
+                <div class="col-6 endStart adaptivLast">
+                    <img src="img/welcome-img2.png" alt="" class="welcome-img2 ">
+                        <button class="welcome-future">
+                            <div>Future</div>
+                            <img src="img/buttonArrow.png" alt="buttonArrow" class="welcome__buttonArrow2">
+                        </button>
+                </div>
+            </div>
+            <div class="dob_slide">
+                <div class="dobDiv row">
+                    <div class="col-5"><p class="fontDob">This isn’t just a platform. It’s a movement. It’s a revolution. And it starts with a promise:</p></div>
+                    <div class="col-3 text-alight">
+                        <p class="proz">100%</p>
+                        <p class="fontDob">Fairness</p>
+                      </div>
+                      <div class="col-4 text-alight">
+                        <p class="proz">0%</p>
+                        <p class="fontDob">Commission</p>
+                      </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section_commission">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 block-center">
+                        <div class="block__items ">
+                            <h1 class="commission-h1">The Power of <span>0% Commission</span></h1>
+                            <p class="commission-p">What does 0% commission mean for you? It means freedom. It means keeping every dirham of your investment. It means real estate, finally done right:</p>
+                            <ul class="commission-ul">
+                                <li class="commission-li"><b>• For Buyers:</b> Turn your dream of owning the perfect home into reality without the burden of extra fees.</li>
+                                <li class="commission-li"><b>• For Sellers:</b> Your property is your biggest asset—keep every dirham and walk away with the value you’ve earned.</li>
+                                <li class="commission-li"><b>• For Developers:</b> Imagine a platform that not only connects you to buyers but also amplifies your profits and reputation.</li>
+                            </ul>
+                            <button class="commission-button commission-buttonAm1">
+                                <div>Discover More</div>
+                                <img src="img/buttonArrow.png" alt="buttonArrow" class="commission__buttonArrow">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <img src="img/oImg.png" alt="photo" class="photo-o displ">
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+
+        <section class="section_developers">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6 block-center2">
+                        <img src="img/home.png" alt="photo" class="photo-house">
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 block-uncenter">
+                        <div class="block__items">
+                            <h1 class="commission-h1">The Velday Advantage <br><span>for Developers</span></h1>
+                            <p class="commission-p">Property developers across the UAE are at the forefront of this transformation. Velday offers developers the tools and platform to thrive in a commission-free era:</p>
+                            <ul class="commission-ul">
+                                <li class="commission-li"><b>• Direct-to-Buyer Sales:</b> Cut through inefficiencies and connect directly with your target market.</li>
+                                <li class="commission-li"><b> • Higher Margins:</b> With no commission fees, developers retain more profit on every unit sold.</li>
+                                <li class="commission-li"><b>• Market Trust:</b> Velday’s transparent approach builds confidence, making it easier for developers to close deals.</li>
+                                <li class="commission-li"><b>• Broader Reach:</b> By removing financial barriers for buyers, developers can expand their market appeal and move inventory faster.</li>
+                            </ul>
+                            <button class="commission-button commission-buttonAm2">
+                                <div>Start exploring</div>
+                                <img src="img/buttonArrow.png" alt="buttonArrow" class="commission__buttonArrow">
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section_revolution container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 block-center2 block-center2-animation ll">
+                        <div class="block__items2">
+                            <h1 class="commission-h1">The Zero-Commission <span>Revolution</span></h1>
+                            <p class="commission-p">Velday is shattering the old norms of real estate. Our zero-commission model isn’t just a feature—it’s a philosophy:</p>
+                            <ul class="commission-ul">
+                                <li class="commission-li"><b>• For Buyers:</b> No hidden costs. No inflated fees.Just properties that fit your budget.</li>
+                                <li class="commission-li"><b>• For Sellers:</b> Keep what’s yours, without compromise.</li>
+                                <li class="commission-li"><b>• For Developers:</b> Unlock new profitability and gain a competitive edge in a changing market.</li>
+                            </ul>
+                            <button class="revolution-button">
+                                <div>Start exploring</div>
+                                <img src="img/buttonArrowBlack.png" alt="buttonArrow" class="revolution__buttonArrow">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 rr">
+                        <img src="img/rImg.png" alt="photo" class="photo-o photo-r">
+                    </div>
+            
+                </div>
+        </section>
+        <section class="section__now">
+            <div class="container">
+                <h3 class="now-h3">Why <span>Now</span><span class="fontSpan">?</span></h3>
+                <p class="now-p">The UAE is a market brimming with potential, but outdated practices have held buyers, sellers, and developers back for too long. Velday is here to break those chains, offering a platform that aligns with the modern buyer’s demand for transparency and efficiency:</p>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 animationImg1">
+                        <div class="now__div-img">
+                            <button class="now-button now_button1">
+                                <img src="img/buttonArrowBlack.png" alt="buttonArrow" class="now__buttonArrow">
+                                <div>Modern</div>
+                            </button>
+                            <img src="img/now1.png" alt="house" class="now-img">
+                        </div>
+                        <h2 class="now-h2">Simpler Transactions</h2>
+                        <p class="now_p-p">Streamlined processes that save you time and money.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 animationImg2">
+                        <div class="now__div-img">
+                            <img src="img/now2.png" alt="house" class="now-img">
+                            <button class="now-button now_button2">
+                                <img src="img/buttonArrowBlack.png" alt="buttonArrow" class="now__buttonArrow">
+                                <div>Value</div>
+                            </button>
+                        </div>
+                        <h2 class="now-h2">Massive Savings</h2>
+                        <p class="now_p-p">No fees mean more value for everyone involved.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 animationImg3">
+                        <div class="now__div-img">
+                            <button class="now-button now_button3">
+                                <img src="img/buttonArrowBlack.png" alt="buttonArrow" class="now__buttonArrow">
+                                <div>Innovation</div>
+                            </button>
+                            <img src="img/now3.png" alt="house" class="now-img">
+                        </div>
+                        <h2 class="now-h2">Future-Proof Solutions</h2>
+                        <p class="now_p-p">Velday is built for a world where fairness and innovation drive success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section__city">
+            <div class="items__city">
+                <img src="img/siti.png" alt="city" class="img-city">
+                <div class="block__city-text">
+                    <h1 class="city-h1">Trust and Transparency <br><span>The Velday Promise</span></h1>
+                    <p class="city-p">At Velday, transparency is more than a value—it’s our promise. Every transaction is backed by clear communication, cutting-edge technology, and a commitment to delivering what we promise. Whether buying, selling, or developing, you can trust us to deliver fair, efficient, and rewarding outcomes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-post">
+            <h1 class="post-h1">Real Stories,<span>Real Impact</span></h1>
+
+            <div class="block_comm">
+                <img src="img/ahmed.png" alt="" class="humman_photo">
+                <div class="comm-text">
+                    <p class="comm_p1">"Velday helped me sell my property in record time, and I didn’t lose a single dirham in commissions. It’s a game-changer!"</p>
+                    <div class="comm_p2"><b>Ahmed</b><br>Dubai Property Seller</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section__movement">
+            <div class="container">
+                <h1 class="movement-h1">Join <span>the Movement</span></h1>
+                <p class="movemont-p">Velday isn’t just about saving money—it’s about changing the way we think about real estate. Whether you’re looking to buy your dream home, sell with confidence, or develop properties with unmatched profitability, Velday is your partner in revolution:</p>
+                <div class="row">
+                    <div class="col-4 floatr desFul">
+                        <!-- <h2 class="movement-h2">Buy Smarter</h2>
+                        <h6 class="movement-h6">No fees. No stress. Just value.</h6> -->
+                        <img src="img/move1.png" alt="" class="move-img">
+                    </div>
+                    <div class="col-4 desFul">
+                        <!-- <h2 class="movement-h2">Buy Smarter</h2>
+                        <h6 class="movement-h6">No fees. No stress. Just value.</h6> -->
+                        <img src="img/move2.png" alt="" class="move-img">
+                    </div>
+                    <div class="col-4 floatl desFul">
+                        <!-- <h2 class="movement-h2">Buy Smarter</h2>
+                        <h6 class="movement-h6">No fees. No stress. Just value.</h6> -->
+                        <img src="img/move3.png" alt="" class="move-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section__newEra">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 lll">
+                        <img src="img/CImg.png" alt="" class="cImg">
+                    </div>
+                    <div class="col-sm-12 col-md-6 center__newEra rrr">
+                        <div class="items_newEra">
+                            <h1 class="newEra-h1">0% Commission. <br><span>A New Era Begins.</span></h1>
+                            <p class="newEra-p">Join Velday today and experience the revolution that’s changing real estate forever.  Start Your Journey Now. Discover how Velday can redefine your real estate experience. Whether you’re buying, selling, or developing, we’re here to make every step seamless and rewarding.</p>
+                            <button class="newEra-button sss">
+                                <div>Contact us</div>
+                                <img src="img/buttonArrowBlack.png" alt="" class="newEra_ArrowBlack">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__block1">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <a href="#"><img src="img/logoB.png" alt="logo" class="logo_footer"></a>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="subscribe-container">
+                            <input type="email" placeholder="Enter your email address" />
+                            <button class="newEra-button">
+                                <div>Subscribe</div>
+                                <img src="img/buttonArrowBlue.png" alt="" class="footer_ArrowBlue">
+                            </button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__block2">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row h100">
+                            <div class="col-4 h100">
+                                <ul class="footer-ul h100 bbbs">
+                                    <li class="footer-li"><a href="#" class="footer-a">Home</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">About us</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Buyers</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Sellers</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Developpers</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 h100">
+                                <ul class="footer-ul h100">
+                                    <li class="footer-li"><a href="#" class="footer-a">Residential Property</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Commercial Property</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Off Plan Developments</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Recently Launched</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Featured Listings</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 h100">
+                                <ul class="footer-ul h100">
+                                    <li class="footer-li"><a href="#" class="footer-a">Handover Soon</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Land for sale</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a big__footer-text">Agents</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Our Agents</a></li>
+                                    <li class="footer-li"><a href="#" class="footer-a">Apply to be an agent</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="footer__gold">
+                        <h5 class="footer-h5">Contact us</h5>
+                        <div class="footer__block-osn">
+                            <div class="footer__items_block">
+                                <div class="f__item1"><img src="img/soz1.png" alt="" class="soz1"></div>
+                                <div class="f__item2"><b>Email address</b><br><a href="#" class="soz-a">info@velday.com</a></div>
+                            </div>
+                            <div class="footer__items_block">
+                                <div class="f__item1"><img src="img/soz2.png" alt="" class="soz1"></div>
+                                <div class="f__item2"><b>Sales executives</b><br><a href="#" class="soz-a">sales@velday.com</a></div>
+                            </div>
+                            <div class="footer__items_block">
+                                <div class="f__item1"><img src="img/soz3.png" alt="" class="soz1"></div>
+                                <div class="f__item2"><b>Help & support</b><br><a href="#" class="soz-a">support@velday.com</a></div>
+                            </div>
+                            <div class="footer__items_block">
+                                <div class="f__item1"><img src="img/soz4.png" alt="" class="soz1"></div>
+                                <div class="f__item2"><b>Office Address</b><br><a href="#" class="soz-a">Creek Harbour, Dubai, UAE</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="footer__block3">
+                <h6 class="back__footer-h6">Copyright © Velday 2024</h6>
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <ul class="back__footer-ul">
+                            <li class="back__footer-li"><a href="#" class="footer-a">Privacy</a></li>
+                            <li class="back__footer-li"><a href="#" class="footer-a">Policy</a></li>
+                            <li class="back__footer-li"><a href="#" class="footer-a">Terms and Conditions</a></li>
+                            <li class="back__footer-li"><a href="#" class="footer-a">Cookie Policy</a></li>
+                            <li class="back__footer-li"><a href="#" class="footer-a">License number: 101 838 1</a></li>
+                            <li class="back__footer-li"><a href="#" class="footer-a">Rera number: 28975</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <ul class="back__footer-ul2">
+                            <li class="back__footer-li"><a href="#" class="footer__img-a"><img src="img/sozf.png" alt="soz" class="back__footer-soz"></a></li>
+                            <li class="back__footer-li"><a href="#" class="footer__img-a"><img src="img/sozt.png" alt="soz" class="back__footer-soz"></a></li>
+                            <li class="back__footer-li"><a href="#" class="footer__img-a"><img src="img/sozi.png" alt="soz" class="back__footer-soz"></a></li>
+                            <li class="back__footer-li"><a href="#" class="footer__img-a"><img src="img/sozin.png" alt="soz" class="back__footer-soz"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,982 @@
+@font-face {
+    font-family: 'Futura_Light';
+    src: url('../fonts/Futura/Futura_Light_Regular.otf') format('woff2'),
+         url('../fonts/Futura/Futura_Light_Regular.otf') format('otf');
+  }
+  @font-face {
+    font-family: 'Futura_Light-400';
+    src: url('../fonts/Futura/futuralight.ttf') format('woff2'),
+         url('../fonts/Futura/futuralight.ttf') format('otf');
+  }
+  @font-face {
+    font-family: 'Futura-Medium_Regular';
+    src: url('../fonts/Futura/Futura-Medium_Regular.ttf') format('woff2'),
+         url('../fonts/Futura/Futura-Medium_Regular.ttf') format('otf');
+  }
+  @font-face {
+    font-family: 'Futura_Light-Book';
+    src: url('../fonts/Futura/Futura_Book_Regular.otf') format('woff2'),
+         url('../fonts/Futura/Futura_Book_Regular.otf') format('otf');
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-Medium.otf') format('woff2'),
+         url('../fonts/Inter/Inter-Medium.otf') format('otf');
+  }
+  @font-face {
+    font-family: 'TabacBigTRIAL';
+    src: url('../fonts/TabacBigTRIAL/TabacBigTRIAL-Medium.otf') format('woff2'),
+         url('../fonts/TabacBigTRIAL/TabacBigTRIAL-Medium.otf') format('otf');
+  }
+  @font-face {
+    font-family: 'TabacBigTRIAL-italic';
+    src: url('../fonts/TabacBigTRIAL/TabacBigTRIAL-MediumItalic.otf') format('woff2'),
+         url('../fonts/TabacBigTRIAL/TabacBigTRIAL-MediumItalic.otf') format('otf');
+  }
+  @font-face {
+    font-family: 'TabacBigTRIAL-SemiBold';
+    src: url('../fonts/TabacBigTRIAL/TabacBigTRIAL-SemiBoldItalic-BF657278a093da8.otf') format('woff2'),
+         url('../fonts/TabacBigTRIAL/TabacBigTRIAL-SemiBoldItalic-BF657278a093da8.otf') format('otf');
+  }
+  :root{
+    --color_main:#34200F;
+    --color_secondary:#C9AB8E;
+    --index:calc(1vw + 1vh);
+    --small__button-text:calc((1vw + 1vh)*0.42);/*13*/
+    --nav_inter:calc((1vw + 1vh)*0.52);/*16*/
+    --text_under-h6:calc((1vw + 1vh)*0.71);/*22*/
+    --h6-small:calc((1vw + 1vh)*0.84);/*25*/
+    --small_text-p:calc((1vw + 1vh)*0.88);/*27*/
+    --h6_book:calc((1vw + 1vh)*0.94);/*29*/
+    --h2_book:calc((1vw + 1vh)*1.30);/*40*/
+    --osnova_h1-small:calc((1vw + 1vh)*1.66);/*52*/
+    --osnova_h4-text:calc((1vw + 1vh)*2.1);/*64*/
+    --osnova_h3-text:calc((1vw + 1vh)*3);/*91*/
+
+  }
+  
+  body{
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2E9E0 19%, #FFFFFF 37%, #F2E9E0 52%, #FFFFFF 71%, #F2E9E0 83%, #FFFFFF 100%);
+    overflow-x:hidden;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+  }
+  h1,h2,h3,h4,h5,h6,p,a,img,ul,li{
+    margin: 0;
+    padding: 0;
+  }
+
+
+.container{
+    padding: 0;
+    overflow-x: hidden;
+}
+/* HEADER----------------------------------------------------- */
+.nav_a:hover{
+    color: #000;
+    text-decoration: none;
+}
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    width: calc(var(--index) * 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6.5vw;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav ul li {
+    margin-right: 35px;
+}
+
+.nav_a {
+    font-size: var(--nav_inter);
+    color: #000;
+    transition: .2s;
+    position: relative;
+    text-decoration: none;
+    padding: 5px 0;
+    display: inline-block;
+    overflow: hidden;
+}
+.nav_a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    border-radius: 15px;
+    background-color: #000;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .nav_a:hover::after {
+    width: 100%;
+  }
+
+.header_button {
+    background-color: var(--color_main);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var(--index) * 1.75);
+    padding: 0 calc(var(--index) * 1.8);
+    border-radius: calc(var(--index) * 10);
+    border: solid 1px var(--color_main);
+    margin-right: 4.25vw;
+    transition: .2s;
+}
+
+.header_button:hover {
+    background-color: #fff;
+    color: var(--color_main);
+}
+
+.header_button-text {
+    font-size: var(--nav_inter);
+    margin-right: calc(var(--index) * .4);
+}
+
+.buttonArrow {
+    margin-left: calc(var(--index) * .4);
+    width: calc(var(--index) * 1.2);
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 15;
+    margin-right:50px;
+}
+
+.burger-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+}
+
+@media screen and (max-width: 1500px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        justify-content:center;
+        position: absolute;
+        top:-10vh;
+        left: 0;
+        padding-top: 520px;
+        background-color: white;
+        width: 100%;
+        height:120vh;
+        padding: 20px;
+        z-index: 10;
+    }
+    .nav_a {
+        font-size: 2vw;
+        color: #000;
+        transition: .2s;
+    }
+    .burger-menu {
+        display: flex; 
+    }
+
+    .nav-links.open {
+        display: flex; 
+    }
+
+    .nav-links.open li {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .header_button {
+        display: none;
+    }
+}
+.header {
+    transition: background-color 0.3s ease; 
+}
+
+
+/*SECTION START-----------------------------------------------------*/
+.section__start{
+    margin-bottom:5vw;
+}
+.section__start-img{
+    padding-top:calc(var(--index)*1);
+    width:100%;
+}
+.start_center {
+    position: absolute;
+    top:0%;
+    margin-top:calc(var(--index)*12);
+    left:50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+.start_h3 {
+    font-family: 'TabacBigTRIAL', sans-serif;
+    font-size: var(--osnova_h3-text);
+    color: var(--color_main);
+}
+.start_h4 {
+    font-family: 'TabacBigTRIAL-SemiBold', sans-serif;
+    font-size: var(--osnova_h4-text);
+    color: var(--color_secondary);
+}
+.start_p {
+    width:495px;
+    margin:0 auto;
+    font-family: 'Futura_Light', sans-serif;
+    font-size: var(--small_text-p);
+    line-height: 28.3px;
+}
+.font-size-df{
+    font-size: var(--osnova_h4-text);
+}
+
+/*SECTION WELCOME-----------------------------------------------------*/
+.section__welcome {
+    background-color: #fff;
+    width:100%;
+    border-radius: calc(var(--index)*1.2);
+    padding-bottom:1px;
+}
+.wel_left{
+    text-align: end;
+}
+.welcome-h1 {
+    font-family: 'TabacBigTRIAL', sans-serif;
+    color: var(--color_main);
+    font-size: var(--osnova_h1-small);
+    letter-spacing: -1.44px;
+    text-align: center;
+    padding-top:90px;
+}
+.welcome-h1 span{
+    font-family: 'TabacBigTRIAL-SemiBold', sans-serif;
+    color: var(--color_secondary);
+    font-size: var(--osnova_h1-small);
+    letter-spacing: -1.44px; 
+}
+.welcome-h6 {
+    font-family: 'Futura_Light-400', sans-serif;
+    font-size: var(--h6-small);
+    color: var(--color_main);
+    text-align: center;
+    padding-bottom: 48px;
+}
+.welcome-img1 {
+    margin-top: calc(var(--index)*.6);
+    width:calc(var(--index)*16.5);
+}
+.welcome-invest {
+    background-color: var(--color_main);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: calc(var(--index)*.15) calc(var(--index)*.4);
+    border-radius:calc(var(--index)*10);
+    position: absolute;
+    right:0;
+    top: 0;
+    margin-right: calc(var(--index)*11);
+    font-size:var(--small__button-text);
+    border: solid 1px var(--color_main);
+    transition: .2s;
+}
+.welcome-invest:hover{
+    color: var(--color_main);
+    background-color: #fff;
+}
+.cenCenter{
+    margin: auto auto;
+}
+.welcome-invest div{
+    padding: 0 calc(var(--index)*.8);
+}
+.welcome__buttonArrow {
+    width: calc(var(--index)*.9);
+    rotate:180deg;
+}
+.welcome_text {
+    font-family: 'Futura_Light-Book', sans-serif;
+    font-size: var(--h6_book);
+    color:var(--color_main);
+    width: calc(var(--index)*15);
+    margin-bottom:20px;
+    
+}
+.endEnd{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top:45px;
+    justify-content: center;
+}
+.endEnd .welcome_text{
+    width: calc(var(--index)*16.5);
+}
+.endEnd p{
+    width: calc(var(--index)*16.5);
+}
+.welcome_text-p {
+    font-family: 'Futura_Light', sans-serif;
+    font-size: var(--text_under-h6);
+    color:var(--color_main);
+    width: calc(var(--index)*15);
+}
+.welcome-img2 {
+    margin-top: calc(var(--index)*1.6);
+    width:calc(var(--index)*16.5);
+    
+}
+.welcome-future div{
+    padding: 0 calc(var(--index)* .8);
+}
+.welcome-future {
+    background-color: var(--color_main);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: var(--color_main);
+    padding: calc(var(--index)*.15) calc(var(--index)*.4);
+    border-radius:calc(var(--index)*10);
+    position: absolute;
+    left:0;
+    bottom: calc(var(--index)*-.4);
+    margin-left: calc(var(--index)*11);
+    font-size:var(--small__button-text);
+    transition: .2s;
+    border: solid 1px var(--color_main);
+    transition: .2s;
+}
+.welcome-future:hover{
+    color: var(--color_main);
+    background-color: #fff;
+}
+.welcome__buttonArrow2 {
+    width: calc(var(--index)*.9);
+}
+.dob_slide {
+    background-color: var(--color_secondary);
+    color: #fff;
+    width: calc((var(--index)*33) + 30px);
+    margin: 78px auto;
+    border-radius:calc(var(--index)*1);
+}
+.dobDiv p{
+    font-family: 'Futura_Light-Book', sans-serif;
+    font-size: var(h6-);
+}
+.dobDiv {
+    margin: 0 auto;
+    width:80%;
+    display: flex;
+    align-items: center;
+    padding: calc(var(--index)*1) 0;
+    
+}
+.text-alight{
+    text-align: center;
+}
+.proz {
+    font-family: 'TabacBigTRIAL-italic', sans-serif!important;
+    color:var(--color_main);
+    font-size: calc(var(--index)*2.2);
+    line-height: calc(var(--index)*2.5);
+    letter-spacing: -0.48px;
+}
+.fontDob{
+    font-size: var(--text_under-h6);
+}
+
+
+
+
+/*SECTION COMMISSION-----------------------------------------------------*/
+.section_commission {
+    background-color:#F6F6F6;
+    margin: 5vw 0;
+}
+.block__items{
+    width:calc(var(--index)*20);
+}
+.block-center{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.commission-h1 {
+    font-family: 'TabacBigTRIAL', sans-serif;
+    color: var(--color_main);
+    font-size: var(--osnova_h1-small);
+}
+.commission-h1 span{
+    font-family: 'TabacBigTRIAL-SemiBold', sans-serif;
+    color: var(--color_secondary);
+}
+.commission-p {
+    font-size: var(--text_under-h6);
+    font-family: 'Futura_Light', sans-serif;
+    margin:24px 0;
+}
+.commission-ul {
+    list-style: none;
+    margin-left: 15px;
+}
+.commission-li {
+    font-size: var(--text_under-h6);
+    font-family: 'Futura_Light', sans-serif;
+    margin-bottom:24px;
+}
+.commission-button {
+    background-color: var(--color_secondary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: calc(var(--index)* .2) calc(var(--index)* .4);
+    border-radius: calc(var(--index)* 10);
+    font-size: var(--snav_inter);
+    transition: .2s;
+    border: solid 1px var(--color_secondary);
+    transition: .2s;
+    font-weight: 400;
+}
+.commission-button:hover{
+    color: var(--color_secondary);
+    background-color: #fff;
+}
+.commission-button div{
+    padding:0 12px;
+}
+.commission__buttonArrow {
+    width: calc(var(--index)*.85);
+}
+.photo-o {
+    width:calc(var(--index)*21.2);
+}
+.photo-r{
+    width:calc(var(--index)*23.2);
+}
+/*SECTION DEVELOPERS-----------------------------------------------------*/
+.photo-house{
+    height:100%;
+    width:100%;
+}
+.block-center2{
+    display: flex; justify-content: center;
+    align-items: center;
+}
+
+/*SECTION REVOLUTION-----------------------------------------------------*/
+.section_revolution{
+    background-color: #fff;
+    border-radius:45px;
+    margin-top:5vw;
+    margin-bottom:5vw;
+}
+.revolution-button{
+    background-color:#fff;
+    color:var(--color_main);
+    display: flex;
+    align-items: center;
+    padding: calc(var(--index)* .2) calc(var(--index)* .4);
+    border-radius: calc(var(--index)* 10);
+    font-size: var(--snav_inter);
+    transition: .2s;
+    border: solid 1px #fff;
+    transition: .2s;
+    font-weight: 400;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px 0px rgba(25, 33, 61, 0.1);
+}
+.revolution-button:hover{
+    background-color:var(--color_main);
+    color: #fff;
+}
+.revolution-button div{
+    padding:0 12px;
+}
+.block__items2{
+    width:calc(var(--index)*18.6);
+    padding-left: 100px;
+}
+.revolution__buttonArrow{
+width: calc(var(--index)*.85);
+}
+
+
+/*SECTION NOW-----------------------------------------------------*/
+.section__now {
+    background-color: var(--color_main);
+    color: #fff;
+    text-align: center;
+    padding: calc(var(--index)*3.45) 0;
+}
+.now-h3 {
+    font-size: var(--osnova_h1-small);
+    font-family: 'TabacBigTRIAL', sans-serif;
+}
+.now-h3 span{
+    font-family: 'TabacBigTRIAL-SemiBold', sans-serif;
+    color: var(--color_secondary);
+}
+.fontSpan{
+    font-family: 'TabacBigTRIAL-italic', sans-serif!important;
+}
+.section__now p{
+    font-size: var(--text_under-h6);
+    font-family: 'Futura_Light-400', sans-serif;
+}
+
+.now-p {
+    width: calc(var(--index)*31.3);
+    margin:calc(var(--index)*1.1) auto;
+    
+}
+.section__now .row .col-sm-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.now-button{
+    background-color: #F4EBE3;
+    color: var(--color_main);
+    display: flex;
+    align-items: center;
+    padding: calc(var(--index)* .15) calc(var(--index)* .4);
+    border-radius: calc(var(--index)* 10);
+    margin-right: calc(var(--index)* 11);
+    font-size: var(--small__button-text);
+    border: solid 1px var(--color_main);
+    transition: .2s;
+}
+.now-button div{
+    padding:0 35px;
+}
+.now-button img{
+    width:calc(var(--index)*.85);
+}
+.now_button1 img{
+    rotate: 180deg;
+}
+.now-button:hover{
+    color:#fff;
+    background-color:var(--color_main);
+    border: solid 1px #fff;
+}
+.now_button1{
+    position: absolute;
+    top: calc(var(--index)*-.5);
+    left:50%;
+    transform: translateX(calc(-50% - calc(var(--index)*5)));
+}
+.now_button2{
+    position: absolute;
+    top: calc(var(--index)*8.5);
+    left:50%;
+    transform: translateX(calc(-50% + calc(var(--index)*5)));
+}
+.now_button3{
+    position: absolute;
+    top: calc(var(--index)*-.5);
+    left:50%;
+    transform: translateX(calc(-50% + calc(var(--index)*5)));
+}
+.now-img {
+    width:calc(var(--index)*14);
+}
+.now-h2 {
+    font-family: 'Futura_Light-Book', sans-serif;
+    font-size: var(--h2_book);
+    margin:calc(var(--index)*1.8) 0 10px 0;
+}
+.now_p-p{
+    width:calc(var(--index)*10);
+    font-size: var(--text_under-h6);
+}
+
+
+/*SECTION CITY-----------------------------------------------------*/
+.section__city {
+    padding:5vw 0;
+}
+.items__city {
+    display: flex;
+}
+.img-city {
+    width: calc(var(--index)*30);
+    margin-right:60px;
+}
+.block__city-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.city-h1 {
+    font-family: 'TabacBigTRIAL', sans-serif;
+    color: var(--color_main);
+    font-size: var(--osnova_h1-small);
+}
+.city-h1 span{
+    font-family: 'TabacBigTRIAL-SemiBold', sans-serif;
+    color: var(--color_secondary);
+
+}
+.city-p {
+    font-family: 'Futura_Light', sans-serif;
+    font-size: var(--text_under-h6);
+    width: calc(var(--index)*22);
+}
+
+
+/*SECTION COMM-----------------------------------------------------*/
+.section-post {
+    text-align: center;
+    background-image: url("../img/ahmed_beack.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: calc(var(--index)*3.5) 0;
+}
+.post-h1 {
+    font-family: 'TabacBigTRIAL', sans-serif;
+    color: var(--color_main);
+    font-size: var(--osnova_h1-small);
+}
+.post-h1 span{
+    font-family: 'TabacBigTRIAL-SemiBold', sans-serif;
+    color: var(--color_secondary);
+}
+.block_comm {
+    border: 1px solid rgb(201, 171, 142);
+    width: calc(var(--index)*26.5);
+    margin: calc(var(--index)*1.8) auto;
+    background-color: #fff;
+    border-radius:39px;
+    display: flex;
+    padding:calc(var(--index)*2) calc(var(--index)*4.2) calc(var(--index)*1.6) calc(var(--index)*4.2);
+}
+.humman_photo {
+    margin-right:calc(var(--index)*2.4);
+    width:calc(var(--index)*4.1);
+    height:calc(var(--index)*4.1);
+}
+.comm-text {
+}
+.comm_p1 {
+    font-family: 'Futura_Light', sans-serif;
+    font-size: var(--text_under-h6);
+    text-align: start;
+    margin-top:10px;
+}
+.comm_p2 {
+    font-family: 'Futura_Light', sans-serif;
+    font-size: var(--text_under-h6);
+    text-align: start;
+    margin-top:calc(var(--index)*1.5);
+}
+
+/*SECTION MOVEMENT-----------------------------------------------------*/
+.section__movement {
+    text-align: center;
+    padding:5vw 0;
+}
+.movement-h1 {
+    font-family: 'TabacBigTRIAL', sans-serif;
+    color: var(--color_main);
+    font-size: var(--osnova_h1-small);
+}
+.movement-h1 span{
+    font-family: 'TabacBigTRIAL-SemiBold', sans-serif;
+    color: var(--color_secondary);
+}
+.movemont-p {
+    font-size: var(--text_under-h6);
+    font-family: 'Futura_Light-400', sans-serif;
+    width: calc(var(--index)*27.9);
+    margin:0 auto;
+    padding-bottom: 60px;
+}
+.move-img{
+    width:calc(var(--index)*12.4);
+}
+.floatr{
+    display: flex;
+    justify-content: end;
+}
+.floatl{
+    display: flex;
+    justify-content: start;
+}
+/* .movement-h2 {
+    position: absolute;
+    
+}
+.movement-h6 {
+} */
+
+
+/*SECTION NEWERA-----------------------------------------------------*/
+.section__newEra {
+    background: linear-gradient(90.00deg, rgb(243, 235, 227),rgba(201, 171, 142, 0.63) 29%,rgb(243, 235, 227) 53.5%,rgb(243, 235, 227) 100%);
+}
+.center__newEra{
+    display: flex;
+    align-items: center;
+}
+.cImg{
+    width: calc(var(--index)*15);
+    float: right;
+    margin-right: calc(var(--index)*4);
+}
+
+.newEra-h1 {
+    font-family: 'TabacBigTRIAL', sans-serif;
+    color: var(--color_main);
+    font-size: var(--osnova_h1-small);
+}
+.newEra-h1 span{
+    font-family: 'TabacBigTRIAL-SemiBold', sans-serif;
+    color: var(--color_secondary);
+}
+.newEra-p {
+    font-size: var(--text_under-h6);
+    font-family: 'Futura_Light-400', sans-serif;
+    width: calc(var(--index)*23.9);
+    margin:20px 0;
+}
+.newEra-button {
+    background-color: #fff;
+    color: var(--color_main);
+    display: flex;
+    align-items: center;
+    padding: calc(var(--index)* .2) calc(var(--index)* .4);
+    border-radius: calc(var(--index)* 10);
+    font-size: var(--snav_inter);
+    transition: .2s;
+    border: solid 1px #fff;
+    transition: .2s;
+    font-weight: 400;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px 0px rgba(25, 33, 61, 0.1);
+}
+.newEra-button:hover{
+    background-color: var(--color_main);
+    color: #fff;
+    border: solid 1px var(--color_main);
+}
+.newEra-button div{
+    padding:0 25px;
+}
+.newEra_ArrowBlack {
+    width: calc(var(--index*.85));
+}
+
+
+/*SECTION FOOTER-----------------------------------------------------*/
+
+.subscribe-container {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width:65%;
+    margin:0 auto;
+  }
+
+  .subscribe-container input[type="email"] {
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    outline: none;
+    font-size: var(--nav_inter);
+    flex: 1;
+    font-family: 'Inter', sans-serif;
+    
+  }
+
+  .subscribe-container input[type="email"]::placeholder {
+    color: #aaa;
+  }
+
+  .subscribe-container button {
+    background-color: #fff;
+    color: var(--color_main);
+    display: flex;
+    align-items: center;
+    padding: calc(var(--index)* .2) calc(var(--index)* .4);
+    border-radius: calc(var(--index)* 10);
+    font-size: var(--snav_inter);
+    transition: .2s;
+    border: solid 1px #fff;
+    transition: .2s;
+    font-weight: 400;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px 0px rgba(25, 33, 61, 0.1);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .subscribe-container button:hover {
+    background-color: #14161C;
+    color: #fff;
+    border: solid 1px #14161C;
+  }
+
+.footer .container{
+    background-color: #14161C;
+    border-radius: 42px;
+    margin-top:5vw;
+    margin-bottom:2.5vw;
+    padding-bottom:calc(var(--index)*1.5);
+}
+.footer__block1 {
+    padding:calc(var(--index)*4) 0 calc(var(--index)*1.63) calc(var(--index)*3.5);
+}
+.logo_footer {
+    width: calc(var(--index)*6.86);
+}
+.subscribe-container {
+    font-family: 'TabacBigTRIAL-SemiBold', sans-serif;
+
+}
+.footer__block2 {
+    padding-left:calc(var(--index)*3.5);
+}
+.footer-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:30px 0;
+}
+.h100{
+    height: 100%;
+}
+
+.footer-a {
+    color: #fff;
+    font-size: var(--nav_inter);
+}
+.footer__gold{
+    border-radius: 20px 0px 0px 20px;
+    background: linear-gradient(-45.70deg, rgb(201, 171, 142) 0%,rgb(52, 32, 15) 124.585%);
+    margin: 0;
+    padding: calc(var(--index)*1.62) 0 calc(var(--index)*1.62) calc(var(--index)*2);
+}
+.big__footer-text {
+    font-family: 'TabacBigTRIAL-italic', sans-serif;
+    font-size: var(--h6-small)!important;
+    color: var(--color_secondary);
+}
+.footer-h5 {
+    color: #fff;
+    font-family: 'TabacBigTRIAL-italic', sans-serif;
+    font-size: var(--h6_book);
+    line-height: 25px;
+}
+.footer__block-osn {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer__items_block {
+    display: flex;
+    width: 40%;
+    color: #fff;
+    padding-top: 25px;
+}
+.un__full{
+    height: 90%;
+}
+.soz1 {
+    margin-right:15px;
+    width:calc(var(--index)*1);
+}
+.f__item2 {
+    font-size:var(--nav_inter);
+}
+.soz-a {
+    color: #fff;
+    font-style: italic;
+}
+.footer__block3 {
+    padding-left:calc(var(--index)*3.5);
+}
+.back__footer-h6 {
+    color: #fff;
+    font-size: var(--nav_inter);
+    margin:calc(var(--index)*2.6) 0 10px 0;
+}
+.back__footer-ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding-right:100px;
+}
+.back__footer-ul2{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width:50%;
+
+}
+
+.footer__img-a {
+    width: 50px;
+}
+
+
+
+
+/*main__log*/
+.main__log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .coming-soon {
+    font-size: 10vw;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: 2px;
+    opacity: 1;
+    display: inline-block;
+    overflow: hidden;
+    font-family: 'TabacBigTRIAL', sans-serif;
+  }
